@@ -1,0 +1,199 @@
+.t-title {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.t-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.t-problem {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.t-about {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+}
+
+.t-answer { 
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.t-progress {
+  width: 80%;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t-next {
+    text-align: center;
+    font-size: 20px;
+    /*-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;*/
+}
+
+.t-button {
+    color: #ffffff;
+    background-color: #6E6E6E;
+    border-color: #A3A3A3;
+    outline: none;
+    font-size: 40px;
+    width: 250px;
+    height: 80px;
+    /*-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;*/
+}
+
+.t-button:hover,
+.t-button:focus,
+.t-button:active,
+.t-button.active,
+.open .dropdown-toggle.t-button {
+    color: #ffffff;
+    background-color: #6E6E6E;
+    border-color: #A3A3A3;
+    outline: none;
+}
+
+.t-button:active,
+.t-button.active,
+.open .dropdown-toggle.t-button {
+    background-image: none;
+}
+
+.t-button.disabled,
+.t-button[disabled],
+fieldset[disabled] .t-button,
+.t-button.disabled:hover,
+.t-button[disabled]:hover,
+fieldset[disabled] .t-button:hover,
+.t-button.disabled:focus,
+.t-button[disabled]:focus,
+fieldset[disabled] .t-button:focus,
+.t-button.disabled:active,
+.t-button[disabled]:active,
+fieldset[disabled] .t-button:active,
+.t-button.disabled.active,
+.t-button[disabled].active,
+fieldset[disabled] .t-button.active {
+    background-color: #6E6E6E;
+    border-color: #A3A3A3;
+}
+
+.t-button .badge {
+    color: #6E6E6E;
+    background-color: #ffffff;
+}
+
+.btn-error { 
+    color: #ffffff; 
+    background-color: #E00303; 
+    border-color: #E00303; 
+    outline: none;
+    font-size: 40px;
+    width: 250px;
+    height: 80px;
+  } 
+   
+  .btn-error:hover, 
+  .btn-error:focus, 
+  .btn-error:active, 
+  .btn-error.active, 
+  .open .dropdown-toggle.btn-error { 
+    color: #ffffff; 
+    background-color: #E00303; 
+    border-color: #E00303; 
+    outline: none;
+  } 
+   
+  .btn-error:active, 
+  .btn-error.active, 
+  .open .dropdown-toggle.btn-error { 
+    background-image: none; 
+  } 
+   
+  .btn-error.disabled, 
+  .btn-error[disabled], 
+  fieldset[disabled] .btn-error, 
+  .btn-error.disabled:hover, 
+  .btn-error[disabled]:hover, 
+  fieldset[disabled] .btn-error:hover, 
+  .btn-error.disabled:focus, 
+  .btn-error[disabled]:focus, 
+  fieldset[disabled] .btn-error:focus, 
+  .btn-error.disabled:active, 
+  .btn-error[disabled]:active, 
+  fieldset[disabled] .btn-error:active, 
+  .btn-error.disabled.active, 
+  .btn-error[disabled].active, 
+  fieldset[disabled] .btn-error.active { 
+    background-color: #E00303; 
+    border-color: #E00303; 
+  } 
+   
+  .btn-error .badge { 
+    color: #E00303; 
+    background-color: #ffffff; 
+  }
+
+  .btn-right { 
+    color: #ffffff; 
+    background-color: #03E003; 
+    border-color: #03E003; 
+    outline: none;
+    font-size: 40px;
+    width: 250px;
+    height: 80px;
+  } 
+   
+  .btn-right:hover, 
+  .btn-right:focus, 
+  .btn-right:active, 
+  .btn-right.active, 
+  .open .dropdown-toggle.btn-right { 
+    color: #ffffff; 
+    background-color: #03E003; 
+    border-color: #03E003; 
+    outline: none;
+  } 
+   
+  .btn-right:active, 
+  .btn-right.active, 
+  .open .dropdown-toggle.btn-right { 
+    background-image: none; 
+  } 
+   
+  .btn-right.disabled, 
+  .btn-right[disabled], 
+  fieldset[disabled] .btn-right, 
+  .btn-right.disabled:hover, 
+  .btn-right[disabled]:hover, 
+  fieldset[disabled] .btn-right:hover, 
+  .btn-right.disabled:focus, 
+  .btn-right[disabled]:focus, 
+  fieldset[disabled] .btn-right:focus, 
+  .btn-right.disabled:active, 
+  .btn-right[disabled]:active, 
+  fieldset[disabled] .btn-right:active, 
+  .btn-right.disabled.active, 
+  .btn-right[disabled].active, 
+  fieldset[disabled] .btn-right.active { 
+    background-color: #03E003; 
+    border-color: #03E003; 
+  } 
+   
+  .btn-right .badge { 
+    color: #03E003; 
+    background-color: #ffffff; 
+  }

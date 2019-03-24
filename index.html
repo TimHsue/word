@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="Tim Hsue">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Word</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/tcss.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/playAudio.js"></script>
+    <script src="js/loadProblem.js"></script>
+    <script src="js/switch.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div id="isPlaying" class="text-hide">0</div>
+<div id="language" class="text-hide">ch</div>
+<div id="answer" class="text-hide">3</div>
+<div id="problemCount" class="text-hide">0</div>
+<div id="rightCount" class="text-hide">0</div>
+<div id="wrongCount" class="text-hide">0</div>
+<div id="answered" class="text-hide">0</div>
+<div id="unhandledRefresh" class="text-hide">0</div>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Word Practice</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul id = "topNav" class="nav navbar-nav">
+                <li id = "pinyin" class="active">
+                    <a href="javascript:void(0);" onclick="show('pinyin')">汉语拼音</a>
+                </li>
+                <li id = "word">
+                    <a href="javascript:void(0);" onclick="show('word')">英语单词</a>
+                </li>
+                <li id = "statistic">
+                    <a href="javascript:void(0);" onclick="show('statistic')">统计</a>
+                </li>
+                <li id = "about">
+                    <a href="javascript:void(0);" onclick="show('about')">关于</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="option" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">选项 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">语言 / Language</li>
+                        <li><a href="javascript:void(0);" onclick="switchToCh()">简体中文</a></li>
+                        <li><a href="javascript:void(0);" onclick="switchToEn()">English</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li id="record" class="dropdown-header">记录选项</li>
+                        <li><a id="opencookie" href="#">打开Cookie记录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div id="innderContent">
+    <div class="t-title">
+        <div class="page-header">
+            <h1 id="problemTittle">&ensp;选择正确读音 <small>&ensp;悬停播放音频，单击提交答案</small></h1>
+        </div>
+    </div>
+
+    <div class="t-content">
+        <div class="jumbotron">
+            <div id="problem" class="t-problem">
+                &ensp;
+            </div>
+            <br><br>
+            <div id="answerAB" class="t-answer">
+                <p>
+                    <button id = "answerA" type="button" class="btn btn-lg t-button" onmouseover="readCh('w', 'o1')"
+                            onclick="checkAnswer(1)">
+                        A
+                    </button>
+                    &ensp;&ensp;&ensp;&ensp;
+                    <button id = "answerB" type="button" class="btn btn-lg t-button" onmouseover="readCh('w', 'o2')"
+                            onclick="checkAnswer(2)">
+                        B
+                    </button>
+                </p>
+            </div>
+            <div id="answerCD" class="t-answer">
+                <p>
+                    <button id = "answerC" type="button" class="btn btn-lg t-button" onmouseover="readCh('w', 'o3')"
+                            onclick="checkAnswer(3)">
+                        C
+                    </button>
+                    &ensp;&ensp;&ensp;&ensp;
+                    <button id = "answerD" type="button" class="btn btn-lg t-button" onmouseover="readCh('w', 'o4')"
+                            onclick="checkAnswer(4)">
+                        D
+                    </button>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div id = "nextProblem" class="t-answer">
+            <button type="button" class="btn btn-lg btn-default t-next" onclick="refreshProblem()">
+                下一题
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	window.onload = refreshProblem();
+</script>
+</body>
+</html>
