@@ -8,7 +8,7 @@ function showStatistic() {
     var yellow = (problemCount - wrongCount - rightCount) * 100 / 20;
     document.getElementById("innderContent").innerHTML = '    <div class="t-title">\
 <div class="page-header">\
-    <h1>&ensp;统计结果 <small>&ensp;共20题，您已完成'+ problemCount + '题，\
+    <h1>&ensp;统计结果 <small>&ensp;共20题，您已完成'+ (problemCount - 1) + '题，\
     正确'+ rightCount + '题，' + '错误' + wrongCount + '题，分数：' + score + '</small></h1>\
 </div>\
 </div>\
@@ -16,9 +16,9 @@ function showStatistic() {
 <div class="progress t-progress">\
         <div class="progress-bar progress-bar-success" style="width: ' + green + '%">\
         <span class="sr-only">aaa</span></div>\
-        <div class="progress-bar progress-bar-danger" style="width: ' + red + '%">\
-        <span class="sr-only"></span></div>\
         <div class="progress-bar progress-bar-warning" style="width: ' + yellow + '%">\
+        <span class="sr-only"></span></div>\
+        <div class="progress-bar progress-bar-danger" style="width: ' + red + '%">\
         <span class="sr-only"></span></div>\
 </div>'
 }

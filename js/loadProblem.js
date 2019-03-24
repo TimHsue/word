@@ -3,7 +3,7 @@ function refreshProblem() {
 	document.getElementById("unhandledRefresh").innerText = 0;
 	console.log(problemCount);
 	if(problemCount > 20) {
-		showResult();
+		show('statistic');
 	} else {
 		problemCount += 1;
 		document.getElementById("problemCount").innerText = problemCount;
