@@ -5,7 +5,7 @@ function showStatistic() {
     var score = rightCount * 100 / 20;
     var green = rightCount * 100 / 20;
     var red = wrongCount * 100 / 20;
-    var yellow = (problemCount - wrongCount - rightCount) * 100 / 20;
+    var yellow = (problemCount - 1 - wrongCount - rightCount) * 100 / 20;
     document.getElementById("innderContent").innerHTML = '    <div class="t-title">\
 <div class="page-header">\
     <h1>&ensp;统计结果 <small>&ensp;共20题，您已完成'+ (problemCount - 1) + '题，\
@@ -26,7 +26,7 @@ function showStatistic() {
 function showPinyin() {
     document.getElementById("innderContent").innerHTML = '<div class="t-title">\
 <div class="page-header">\
-    <h1>&ensp;选择正确读音 <small>&ensp;悬停播放音频，单击提交答案</small></h1>\
+    <h1 id="problemTittle">&ensp;选择正确读音 <small>&ensp;悬停播放音频，单击提交答案</small></h1>\
 </div>\
 </div>\
 \
@@ -65,7 +65,7 @@ function showPinyin() {
     </div>\
     <br>\
     <div id = "nextProblem" class="t-answer">\
-        <button type="button" class="btn btn-lg btn-default t-next" onclick="refreshProblem()">\
+        <button id="nextProblemB" type="button" class="btn btn-lg btn-default t-next" onclick="refreshProblem()">\
             下一题\
         </button>\
     </div>\
@@ -110,6 +110,10 @@ function switchToCh() {
     if (problemTittle != null) {
         problemTittle.innerHTML = "&ensp;选择正确读音 <small>&ensp;悬停播放音频，单击提交答案</small>"
     }
+    var nextProblemB = document.getElementById("nextProblemB");
+    if (nextProblemB != null) {
+        nextProblemB.innerText = "下一题";
+    }
 }
 
 function switchToEn() {
@@ -128,6 +132,10 @@ function switchToEn() {
     if (problemTittle != null) {
         problemTittle.innerHTML = "&ensp;Choose The Correct Pronunciation\
             <small>&ensp;Hover to pronounce, click to submit</small>"
+    }
+    var nextProblemB = document.getElementById("nextProblemB");
+    if (nextProblemB != null) {
+        nextProblemB.innerText = "Next";
     }
 }
 
