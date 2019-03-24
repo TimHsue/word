@@ -88,7 +88,7 @@ function showAbout() {
 function showWord() {
     document.getElementById("innderContent").innerHTML = '<div class="t-title">\
 <div class="page-header">\
-    <h1>&ensp;啊哦<small>&ensp;这里还没有开放qwq</small></h1>\
+    <h1>&ensp;啊哦<small>&ensp;这里还没有开放qwq，<a href="word.lcy.im">可以先来这里玩玩！</a></small></h1>\
 </div>\
 <div class="t-about"> 天天正在加油写了ovo </div>\
 '
