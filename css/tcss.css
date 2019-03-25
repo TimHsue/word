@@ -39,6 +39,7 @@
 .t-next {
     text-align: center;
     font-size: 20px;
+    outline: none;
     /*-webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;*/
 }

@@ -2,7 +2,7 @@ function refreshProblem() {
 	var problemCount = parseInt(document.getElementById("problemCount").innerText);
 	document.getElementById("unhandledRefresh").innerText = 0;
 	console.log(problemCount);
-	if(problemCount > 20) {
+	if(problemCount >= 20) {
 		show('statistic');
 	} else {
 		problemCount += 1;
@@ -57,6 +57,7 @@ function refreshProblem() {
 function checkAnswer(choice) {
 	var answer = parseInt(document.getElementById("answer").innerText);
 	var answered = document.getElementById("answered").innerText;
+	var problemCount = parseInt(document.getElementById("problemCount").innerText);
 	if (answered == "1") return;
 	var toChoice = {1: "A", 2: "B", 3: "C", 4: "D"};
 	document.getElementById("answered").innerText = "1";
@@ -78,16 +79,16 @@ function checkAnswer(choice) {
 		// console.log(document.getElementById("answer" + toChoice[i])..getAttribute("active"));
 		// document.getElementById("answer" + toChoice[i]).setAttribute("checked", false);
 	}
-	document.getElementById("unhandledRefresh").innerText = 1;
+	document.getElementById("unhandledRefresh").innerText = problemCount;
 
-	sleep(1500).then(() => {
+	sleep(1800).then(() => {
 		var unhandled = parseInt(document.getElementById("unhandledRefresh").innerText);
-		if (unhandled === 1) eval(readAnswer);
+		if (unhandled === problemCount) eval(readAnswer);
 	})
 
 	sleep(3000).then(() => {
 		document.getElementById("answered").innerText = "0";
 		var unhandled = parseInt(document.getElementById("unhandledRefresh").innerText);
-		if (unhandled === 1) refreshProblem();
+		if (unhandled === problemCount) refreshProblem();
 	})
 }

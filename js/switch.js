@@ -5,10 +5,10 @@ function showStatistic() {
     var score = rightCount * 100 / 20;
     var green = rightCount * 100 / 20;
     var red = wrongCount * 100 / 20;
-    var yellow = (problemCount - 1 - wrongCount - rightCount) * 100 / 20;
+    var yellow = (problemCount - wrongCount - rightCount) * 100 / 20;
     document.getElementById("innderContent").innerHTML = '    <div class="t-title">\
 <div class="page-header">\
-    <h1>&ensp;统计结果 <small>&ensp;共20题，您已完成'+ (problemCount - 1) + '题，\
+    <h1>&ensp;统计结果 <small>&ensp;共20题，您已完成'+ (problemCount) + '题，\
     正确'+ rightCount + '题，' + '错误' + wrongCount + '题，分数：' + score + '</small></h1>\
 </div>\
 </div>\
@@ -88,7 +88,7 @@ function showAbout() {
 function showWord() {
     document.getElementById("innderContent").innerHTML = '<div class="t-title">\
 <div class="page-header">\
-    <h1>&ensp;啊哦<small>&ensp;这里还没有开放qwq，<a href="word.lcy.im">可以先来这里玩玩！</a></small></h1>\
+    <h1>&ensp;啊哦<small>&ensp;这里还没有开放qwq，<a href="https://word.lcy.im">可以先来这里玩玩！</a></small></h1>\
 </div>\
 <div class="t-about"> 天天正在加油写了ovo </div>\
 '
